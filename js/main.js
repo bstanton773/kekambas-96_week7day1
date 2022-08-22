@@ -120,3 +120,211 @@ var mixedArr = [1, 'Hello', {a: 123, b:321, hello: 'Hello'}, [1, 2, 3], function
 console.log(mixedArr);
 
 console.log(mixedArr[2]['a']);
+
+console.clear();
+
+// let - Allows us to declare a variable similar as var *let is block-scoped, var is global-scoped*
+let myCity = 'Chicago';
+console.log(myCity);
+
+// Create a block with {}
+{
+    var myState = 'Illinois'; // Declare global variable myState
+    let color = 'blue'; // Declare block variable color
+    // let myCity = 'Springfield'; // Declare block variable myCity
+    console.log(myCity, myState, color);
+}
+
+console.log(myCity, myState); 
+
+// const - similar to let (block scoped) - 2 differences: 1. Needs a value when declared 2. Cannot be reassigned
+const newVariable = 'something';
+console.log(newVariable);
+
+// newVariable = 'another thing'; // main.js:144 Uncaught TypeError: Assignment to constant variable.
+
+
+const myBirthday = true;
+let ageOfPerson = 40;
+
+if (myBirthday){
+    const favColor = 'Green';
+    ageOfPerson = ageOfPerson + 1; // OK because ageOfPerson was declared with *let*
+    // myBirthday = false; // Error because myBirthday was declared with *const*
+    console.log(ageOfPerson);
+    console.log(favColor);
+}
+
+// console.log(favColor); // Error: favColor not defined 
+
+
+const cities = ['Chicago', 'New York', 'Denver', 'San Diego']
+
+console.log(cities);
+
+cities[1] = 'San Francisco';
+
+console.log(cities);
+
+// cities = ['Austin', 'Portland'];
+// console.log(cities);
+
+const newPerson = {
+    first: 'Abraham',
+    last: 'Lincoln'
+};
+
+console.log(newPerson);
+
+newPerson.first = 'Abe';
+
+console.log(newPerson);
+
+// newPerson = {
+//     first: 'George',
+//     last: 'Washington'
+// };
+
+// let myname;
+
+// if (true){
+//     myname = 'dfjdslfjk'
+// }
+
+// Clear the console for the next topic
+console.clear();
+
+/*
+    Basic Math Operations
+*/
+
+// Addition
+let sum = 5 + 5;
+console.log(sum);
+sum += 5; // sum = sum + 5
+console.log(sum);
+sum++; // sum = sum + 1 // sum += 1
+console.log(sum);
+
+// Subtraction
+let diff = 10 - 5;
+console.log(diff);
+diff -= 3; // diff = diff - 3
+console.log(diff);
+diff--; // diff = diff - 1; diff -= 1
+console.log(diff);
+
+
+// Multiplication
+let prod = 4 * 5;
+console.log(prod);
+prod *= 2; // prod = prod * 2
+console.log(prod)
+
+
+// Division
+let quotient = 40 / 5;
+console.log(quotient);
+quotient /= 2; // quotient = quotient / 2
+console.log(quotient);
+
+
+// Exponents
+let square = 5 ** 2;
+console.log(square);
+square **= 2; // square = square ** 2
+console.log(square);
+
+
+// Modulo
+let remainder = 19 % 4;
+console.log(remainder);
+remainder %= 2; // remainder = remainder % 2
+console.log(remainder);
+
+
+// Floor Division - no builtin operator - use builtin Math module
+let floor = Math.floor(19/4)
+console.log(floor);
+
+
+// + operator with a number and string
+let myString = 'My age is ';
+let myNewAge = 55;
+
+let addedString = myString + myNewAge;
+console.log(addedString);
+console.log(typeof addedString);
+
+
+console.log(square);
+
+let quizOne = square + '4';
+// undefined, 629, 6254, 625+4
+console.log(quizOne)
+
+let answer = square + Number('4')
+console.log(answer);
+
+
+let quizTwo = square - '4';
+// undefined, 621, 6254, 625-4
+console.log(quizTwo);
+
+
+// let test = 'for' - 'or'
+// console.log(test);
+
+let test = '5' + 5 + 5;
+console.log(test);
+
+console.clear();
+
+// JavaScript Comparisons
+
+console.log(5 == 5);
+console.log(5 == 5.0);
+console.log(5 == '5');
+console.log(5 === '5');
+// == checks for equality while allowing for type conversion
+// === checks for equality but does not allow for type conversion
+
+console.log(1 == true);
+
+
+console.log('10' < 5);
+
+// Be careful with type conversions
+
+console.log('10' > '9'); // Both values are strings, no conversion needed, compares alphabetically
+
+
+// When JavaScript compares objects, it looks for REFERNCE ONLY!!!
+let arr1 = [1, 2, 3, 4];
+let arr2 = [1, 2, 3, 4];
+
+console.log(arr1 == arr2);
+console.log(arr1 === arr2);
+
+
+let animals = ['cat', 'bird', 'dog'];
+let newerArr = animals;
+
+console.log(animals);
+console.log(newerArr);
+
+console.log(animals == newerArr);
+console.log(animals == ['cat', 'bird', 'dog']);
+console.log(newerArr == ['cat', 'bird', 'dog']);
+
+animals.push('horse');
+console.log(newerArr);
+
+
+// Greater Than (>), Greater Than or Equal (>=), Less Than (<), Less Than or Equal (<=)
+// Equal allow type conversion (==), Equal no type conversion (===), 
+// Not Equal yes conversion (!=), Not Eqaul no conversion (!==)
+console.log(5 != '5');
+console.log(5 !== '5');
+
+console.clear();
