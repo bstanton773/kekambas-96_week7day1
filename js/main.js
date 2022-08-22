@@ -328,3 +328,123 @@ console.log(5 != '5');
 console.log(5 !== '5');
 
 console.clear();
+
+
+// Control Flow
+
+// if (condition expression){code to execute if true};
+
+let newNumber = 10;
+
+console.log('Begin');
+if (newNumber > 65){
+    console.log('Senior')
+} else if (newNumber > 18) {
+    console.log('Adult')
+} else {
+    console.log('Child')
+};
+console.log('End');
+
+// Ternary Operator - (condition) ? value if true : value if false
+// PYTHON: age_group = 'Adult' if age > 18 else 'Child'
+
+let ageGroup = (newNumber > 18) ? 'Adult' : 'Child';
+console.log(ageGroup); 
+
+// PYTHON: age_group_2 = 'Senior' if age > 65 else 'Adult' if age > 18 else 'Child'
+
+let ageGroup2 = (newNumber > 65) ? 'Senior' : (newNumber > 18) ? 'Adult': 'Child'
+console.log(ageGroup2);
+
+
+// && - and
+// || - or
+
+newNumber = 10;
+if (newNumber > 18 && newNumber < 40){
+    console.log('Young Adult');
+};
+
+if (newNumber < 18 || newNumber > 65){
+    console.log('You get a discount!');
+};
+
+console.clear();
+
+
+/*
+    JavaScript Loops
+    for, for...in, for...of, while, do while
+*/
+
+// Standard for loop
+// for (counter; expression/condition; increment/decrement for counter){code to execute each loop}
+
+console.log('Loop has started');
+
+for (let i = 0; i <= 20; i++){
+    console.log(i)
+}
+
+console.log('Loop has ended');
+
+let colors = ['red', 'green', 'purple', 'pink'];
+
+for (let i=0; i<colors.length;i++){
+    console.log(i, colors[i]);
+}
+
+
+// for...in -- used to loop over the properties of an object
+let teams = {
+    mlb: 'White Sox',
+    nba: 'Bulls',
+    nfl: 'Bears',
+    nhl: 'Blackhawks'
+};
+
+// for (let variable in obj){code to execute for each property in object}
+for (let t in teams){
+    console.log(t);
+    console.log(teams[t]);
+};
+
+
+// for...of -- used to loop over the elements in an Array
+let planets = ['Mercury', 'Mars', 'Earth', 'Venus', 'Jupiter']
+
+for (let p of planets){
+    console.log(p);
+};
+
+// While Loop
+// while (condition){code to execute while condition is true}
+
+let num1 = 1;
+
+while (num1 < 10){
+    console.log(num1);
+    num1++;
+};
+
+
+// Do While Loop... DO the first portion AT LEASE ONCE
+// If the while condition is still true, continue the while loop
+
+// do {code to execute} while (condition)
+
+let k = 100;
+
+do {
+    k *= 2;
+    console.log(k);
+} while (k < 10);
+
+
+// do {
+//     var firstName = prompt('What is your name?')
+// } while (!firstName);
+
+
+
